@@ -16,13 +16,14 @@ base_url  = "https://li.quest/v1/quote"
 headers = {"accept": "application/json"}
 fromChain = 1
 toChain = 42161
+fromAmount =  str(1000000)
 fromToken = "0xdac17f958d2ee523a2206206994597c13d831ec7"
-toToken = "xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9"
+toToken = "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9"
 
 
 def main():
 
-    params = LifiConfig(fromChain, toChain , fromToken, toToken)
+    params = LifiConfig(fromChain, toChain , fromAmount , fromToken, toToken)
     api = LiFiAPI(base_url , headers)
     try:
         response = api.get("", params)  
