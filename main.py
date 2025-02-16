@@ -11,6 +11,14 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)     # In cas
 In case that we want to intercept the request via burpsuit or any other application
 proxies = {'http':' http://127.0.0.1:8080' , 'https':'https://127.0.0.1:8080'} 
 """""
+# LiFi api configuration
+
+
+url = "https://li.quest/v1/quote"
+
+headers = {"accept": "application/json"}
+
+
 
 
 def main():
