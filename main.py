@@ -1,14 +1,14 @@
 import requests
 import sys
 import urllib3
-import time 
+
 
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)     # In case of any SSL/TLS certification verification warnings
 
 
 """""
-In case that we want to intercept the request via burpsuit or any other method 
+In case that we want to intercept the request via burpsuit or any other application
 proxies = {'http':' http://127.0.0.1:8080' , 'https':'https://127.0.0.1:8080'} 
 """""
 
