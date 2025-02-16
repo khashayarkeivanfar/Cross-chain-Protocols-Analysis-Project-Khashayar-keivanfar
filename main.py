@@ -3,6 +3,7 @@ import sys
 import urllib3
 import time 
 
+
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)     # In case of any SSL/TLS certification verification warnings
 
 
@@ -22,15 +23,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-#timer decorator
-def timer(func):
-    def wrapper():
-        start = time.time()
-        func()
-        elapsed = time.time() - start
-        print ('took {} to retrieve the data'.format(elapsed))
-    return wrapper
-
 
 
 
