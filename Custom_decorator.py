@@ -1,8 +1,9 @@
 import time
 def timer(func):
-    def wrapper():
+    def wrapper(*args, **kwargs):
         start = time.time()
-        func()
+        result = func(*args, **kwargs) 
         elapsed = time.time() - start
-        print ('took {} to retrieve the data'.format(elapsed))
+        print(f'Took {elapsed:.4f} seconds to retrieve the data')
+        return result 
     return wrapper

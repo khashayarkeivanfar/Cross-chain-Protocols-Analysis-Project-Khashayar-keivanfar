@@ -1,22 +1,17 @@
-class Param:
-    def __init__(self, **kwargs):
-        for key, value in kwargs.items():
-            setattr(self, key, value)
+def LifiConfig(fromChain, toChain , fromToken, toToken):
 
-    def ParamConfig(self, **kwargs):
-        try:
-            token_dict = {
-                "fromChain": getattr(self, "fromChain", None),
-                "toChain": getattr(self, "toChain", None),
-                "fromToken": getattr(self, "fromToken", None),
-                "toToken": str(getattr(self, "toToken", 0) * (10**18)),
-                "fromAddress": "0x0000000000000000000000000000000000000000",
-                "includeDEXs": "true",
-            }
-            return token_dict
-        except AttributeError as e:
-            print(f"Error: {e}")
-            return {}
+    param_LiFi = {
+        "fromChain": fromChain,
+        "toChain": toChain,
+        "fromToken": fromToken,
+        "toToken": toToken,
+        "fromAddress": "0x0000000000000000000000000000000000000000",
+        "includeDEXs": "true",
+                }
+    return param_LiFi
+    def bugeeConfig():
+        pass
+
     
 
         

@@ -1,6 +1,6 @@
 import requests
 from Custom_decorator import timer
-import jason 
+import json
 
 class API:
     def __init__(self, base_url, headers=None, timeout=30):
