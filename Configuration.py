@@ -1,6 +1,7 @@
-def LifiConfig(fromChain, toChain , fromAmount, fromToken, toToken):
+from API import *
+def Config(fromChain, toChain , fromAmount, fromToken, toToken):
 
-    param_LiFi = {
+    params = {
         "fromChain": fromChain,
         "toChain": toChain,
         "fromToken": fromToken,
@@ -9,11 +10,11 @@ def LifiConfig(fromChain, toChain , fromAmount, fromToken, toToken):
         "fromAddress": "0x1111111111111111111111111111111111111111",
         "includeDEXs": "true",
                 }
-    return param_LiFi
+    return params
     
-    def bugeeConfig():
-
-        pass
+def fetch_data(api_obj, endpoint, params):
+    
+    return api_obj.get(endpoint, params)
 
     
 

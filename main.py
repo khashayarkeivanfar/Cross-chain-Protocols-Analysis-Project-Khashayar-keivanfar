@@ -12,19 +12,20 @@ In case that we want to intercept the request via burpsuit or any other applicat
 proxies = {'http':' http://127.0.0.1:8080' , 'https':'https://127.0.0.1:8080'} 
 """""
 # LiFi API initialization
-base_url  = "https://li.quest/v1/quote"
+base_url_LiFi  = "https://li.quest/v1/quote"
 headers = {"accept": "application/json"}
 fromChain = 1
 toChain = 42161
 fromAmount =  str(1000000)
-fromToken = "0xdac17f958d2ee523a2206206994597c13d831ec7"
-toToken = "0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9"
+fromToken ="USDT" #"0xdac17f958d2ee523a2206206994597c13d831ec7"
+toToken ="USDT"       #"0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9"
 
-
+# Bungee API initialization
+#base_url = 
 def main():
 
     params = LifiConfig(fromChain, toChain , fromAmount , fromToken, toToken)
-    api = LiFiAPI(base_url , headers)
+    api = LiFiAPI(base_url_LiFi , headers)
     try:
         response = api.get("", params)  
         print(json.dumps(response, indent=4))  
