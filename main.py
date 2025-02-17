@@ -4,7 +4,6 @@ import urllib3
 from API import *
 from Configuration import *
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from tokens import *
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)     # In case of any SSL/TLS certification verification warnings
 
 
