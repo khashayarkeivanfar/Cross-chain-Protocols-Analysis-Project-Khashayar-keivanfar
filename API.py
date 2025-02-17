@@ -33,7 +33,7 @@ class BungeeAPI(API):
     def __init__(self, base_url, headers=None, timeout=30):
         
         bungee_specific_headers = {
-            'API-KEY': '72a5b4b0-e727-48be-8aa1-5da9d62fe635'
+            'API-KEY': '72a5b4b0-e727-48be-8aa1-5da9d62fe635' , 
         }
         merged_headers = {**bungee_specific_headers, **(headers or {})}
         super().__init__(base_url, headers=merged_headers, timeout=timeout)

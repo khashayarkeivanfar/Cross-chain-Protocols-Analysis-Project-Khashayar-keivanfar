@@ -20,7 +20,7 @@ headers = {"accept": "application/json"}
 # LiFi API Instances
 api_lifi_instances = {
     "USDTETH_USDTARO": LiFiAPI(base_url_LiFi, headers),
-    "BNBBSC_AVAXC": LiFiAPI(base_url_LiFi, headers),
+    # "BNBBSC_AVAXC": LiFiAPI(base_url_LiFi, headers),
     "USDCBASE_ETHETH": LiFiAPI(base_url_LiFi, headers),
     "USDCSOL_USDCARO": LiFiAPI(base_url_LiFi, headers),
 }
@@ -28,7 +28,7 @@ api_lifi_instances = {
 # Bungee API Instances
 api_Bungee_instances = {
     "USDTETH_USDTARO": BungeeAPI(base_url_Bungee, headers),
-    "BNBBSC_AVAXC": BungeeAPI(base_url_Bungee, headers),
+    # "BNBBSC_AVAXC": BungeeAPI(base_url_Bungee, headers),
     "USDCBASE_ETHETH": BungeeAPI(base_url_Bungee, headers),
     "USDCSOL_USDCARO": BungeeAPI(base_url_Bungee, headers),
 }
@@ -37,8 +37,8 @@ api_Bungee_instances = {
 api_LiFi_params = {
     "USDTETH_USDTARO": ConfigLiFi(fromChain=1, toChain=42161, fromAmount=str(1000000),
                                   fromToken="USDT", toToken="USDT"),
-    "BNBBSC_AVAXC": ConfigLiFi(fromChain=56, toChain=43114, fromAmount=str(100000000000000000000000000),
-                               fromToken="BNB", toToken="AVAX"),
+    # "BNBBSC_AVAXC": ConfigLiFi(fromChain=56, toChain=43114, fromAmount=str(100000000000000000000000000),
+    #                            fromToken="BNB", toToken="AVAX"),
     "USDCBASE_ETHETH": ConfigLiFi(fromChain=8453, toChain=1, fromAmount=str(1000000),
                                   fromToken="USDC", toToken="USDC"),
     "USDCSOL_USDCARO": ConfigLiFi(fromChain=1, toChain=42161, fromAmount=str(1000000),
@@ -47,18 +47,18 @@ api_LiFi_params = {
 
 # Bungee API Parameters
 api_Bungee_params = {
-    "USDTETH_USDTARO": ConfigBungee(fromChain=1, toChain=42161, fromAmount=str(1000000),
-                                    fromToken="0xdac17f958d2ee523a2206206994597c13d831ec7",
-                                    toToken="0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9"),
-    "BNBBSC_AVAXC": ConfigBungee(fromChain=56, toChain=43114, fromAmount=str(100000000),
-                                 fromToken="BNB",
-                                 toToken="FvwEAhmxKfeiG8SnEvq42hc6whRyY3EFYAvebMqDNDGCgxN5Z"),
-    "USDCBASE_ETHETH": ConfigBungee(fromChain=8453, toChain=1, fromAmount=str(1000000),
-                                    fromToken="0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
-                                    toToken="USDC"),
-    "USDCSOL_USDCARO": ConfigBungee(fromChain=1, toChain=42161, fromAmount=str(1000000),
-                                    fromToken="0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
-                                    toToken="0xaf88d065e77c8cC2239327C5EDb3A432268e5831"),
+    "USDTETH_USDTARO": ConfigBungee(fromChainId=1, toChainId=42161, fromAmount=str(1000000),
+                                    fromTokenAddress="0xdac17f958d2ee523a2206206994597c13d831ec7",
+                                    toTokenAddress="0xfd086bc7cd5c481dcc9c85ebe478a1c0b69fcbb9"),
+    # "BNBBSC_AVAXC": ConfigBungee(fromChain=56, toChain=43114, fromAmount=str(100000000),
+    #                              fromToken="BNB",
+    #                              toToken="FvwEAhmxKfeiG8SnEvq42hc6whRyY3EFYAvebMqDNDGCgxN5Z"),
+    "USDCBASE_ETHETH": ConfigBungee(fromChainId=8453, toChainId=1, fromAmount=str(1000000),
+                                    fromTokenAddress="0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+                                    toTokenAddress="0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"),
+    "USDCSOL_USDCARO": ConfigBungee(fromChainId=1, toChainId=42161, fromAmount=str(1000000),
+                                    fromTokenAddress="0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+                                    toTokenAddress="0xaf88d065e77c8cC2239327C5EDb3A432268e5831"),
 }
 
 # Function to Fetch Data
