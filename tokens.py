@@ -22,3 +22,8 @@ crypto_chains = {
 }
 
 
+def get_chain_name(chain_id):
+    for name, id_ in crypto_chains.items():
+        if id_ == chain_id:
+            return name
+    return "Unknown"
