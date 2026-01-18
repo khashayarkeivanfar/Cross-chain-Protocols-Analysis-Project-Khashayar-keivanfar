@@ -21,13 +21,13 @@ The repository is designed as a **modular data-collection and processing pipelin
 
 ## Repository Structure
 
-├── main.py # Entry point – orchestrates data collection & analysis
-├── API.py # API request logic and data retrieval functions
-├── parse.py # Parsing and normalization of API responses
-├── Configuration.py # Global configuration and constants
-├── tokens.py # Blockchain and token metadata
-├── Custom_decorator.py # Utility decorators (e.g., execution timing)
-├── requierments.txt # Python dependencies
+- main.py # Entry point – orchestrates data collection & analysis
+- API.py # API request logic and data retrieval functions
+- parse.py # Parsing and normalization of API responses
+- Configuration.py # Global configuration and constants
+- tokens.py # Blockchain and token metadata
+- Custom_decorator.py # Utility decorators (e.g., execution timing)
+- requierments.txt # Python dependencies
 
 
 ---
